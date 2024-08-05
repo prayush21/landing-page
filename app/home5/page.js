@@ -1,35 +1,55 @@
-import Home3Blog from "@/components/Home3/Home3Blog";
-import Home5Slider from "@/components/Home5/Home5Slider";
-import Home3Info from "@/components/Home3/Home3Info";
-import Home3Introduce from "@/components/Home3/Home3Introduce";
-import Home3Principle from "@/components/Home3/Home3Principle";
-import Home3Project from "@/components/Home3/Home3Project";
-import Home3Service from "@/components/Home3/Home3Service";
-import DesktopHeader from "@/layouts/desktop-header";
+import HomeSlider from "@/components/Home/HomeSlider";
+import Home2About from "@/components/Home2/Home2About";
+import Home2Blog from "@/components/Home2/Home2Blog";
+import Home2CTA from "@/components/Home2/Home2CTA";
+import Home2Hero from "@/components/Home2/Home2Hero";
+import Home2Info from "@/components/Home2/Home2Info";
+import Home2InfoRating from "@/components/Home2/Home2InfoRating";
+import Home2Project from "@/components/Home2/Home2Project";
+import Home2Service from "@/components/Home2/Home2Service";
+import Home2Support from "@/components/Home2/Home2Support";
 import Layout from "@/layouts/layout";
-import MobileHeader from "@/layouts/mobile-header";
 
 export const metadata = {
-  title: "Home Gama",
+  title: "Home Beta",
 };
 
-export default function page() {
+export default function home5() {
   return (
     <>
       <Layout className={"nobglight"}>
-        <Home5Slider />
+        {/* <!-- Hero Header --> */}
+        {/* <Home2Hero /> */}
+        <HomeSlider />
+        {/* <!-- /Hero Header --> */}
 
-        <Home3Introduce />
+        {/* <!-- Info List --> */}
+        <Home2Info />
+        {/* <!-- /Info List --> */}
 
-        <Home3Service />
+        {/* <!-- About Section --> */}
+        <Home2About />
+        {/* <!-- /About Section --> */}
 
-        <Home3Info />
+        {/* <!-- Info & Rating --> */}
+        <Home2InfoRating />
+        {/* <!-- /Info & Rating --> */}
 
-        <Home3Principle />
+        {/* <!-- Project Sticky Shortcode --> */}
+        <Home2Project />
+        {/* <!-- /Project Sticky Shortcode --> */}
 
-        <Home3Project />
+        {/* <!-- Service Section #2 --> */}
+        <Home2Service />
+        {/* <!-- /Service Section #2 --> */}
 
-        <Home3Blog />
+        {/* <!-- Support Section --> */}
+        {/* <Home2Support /> */}
+        {/* <!-- /Support Section --> */}
+
+        {/* <!-- Blog Section --> */}
+        {/* <Home2Blog /> */}
+        {/* <!-- /Blog Section --> */}
       </Layout>
     </>
   );

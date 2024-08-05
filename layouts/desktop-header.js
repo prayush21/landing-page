@@ -25,7 +25,7 @@ export default function DesktopHeader() {
     <>
       <div className="industify_fn_header">
         {/* <!-- Header: Top Panel --> */}
-        <div className="industify_fn_toppanel">
+        {/* <div className="industify_fn_toppanel">
           <div className="left_panel">
             <div className="info">
               <Link href="tel:07787744741">(0778) 774 - 474 -1</Link>
@@ -65,7 +65,7 @@ export default function DesktopHeader() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <!-- /Header: Top Panel --> */}
 
         {/* <!-- Header: Bottom Panel --> */}
@@ -86,28 +86,11 @@ export default function DesktopHeader() {
           </div>
           <div className="menu_nav">
             <ul className="industify_fn_main_nav vert_nav">
-              <li className="menu-item-has-children">
-                <Link href="/">Home</Link>
-                <ul className="sub-menu">
-                  <li>
-                    <Link href="/">Home Alpha</Link>
-                  </li>
-                  <li>
-                    <Link href="/home2">Home Beta</Link>
-                  </li>
-                  <li>
-                    <Link href="/home3">Home Gamma</Link>
-                  </li>
-                  <li>
-                    <Link href="/home4">Home Delta</Link>
-                  </li>
-                </ul>
-              </li>
               <li>
-                <Link href="/portfolio">Projects</Link>
+                <Link href="/home5">Home</Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/services">Our Services</Link>
+                <Link href="/services">Our Products</Link>
                 <ul className="sub-menu">
                   <li>
                     <Link href="/services/serviceSinglePage9">
@@ -156,7 +139,7 @@ export default function DesktopHeader() {
                   </li>
                 </ul>
               </li>
-              <li className="menu-item-has-children">
+              {/* <li className="menu-item-has-children">
                 <Link href="#">Pages</Link>
                 <ul className="sub-menu">
                   <li>
@@ -178,9 +161,9 @@ export default function DesktopHeader() {
                     <Link href="/protected">Protected Page</Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
               <li>
-                <Link href="/blog">Blog</Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
                 <Link href="/contact">Contact</Link>
