@@ -1,48 +1,20 @@
+"use client";
+
+import { ourProducts } from "@/data";
 import Sidebar from "@/layouts/sidebar";
 import { Check } from "@/public/svg/icon";
+import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function ServiceSingle9() {
-  let details = [
-    {
-      label: "Description",
-      contentType: "paragraph",
-      content: `FIXCON is a polymer modified grey coloured cement base powder tile adhesive`,
-    },
-    {
-      label: "Standard",
-      contentType: "unordered_list",
-      content: `IS:15477 ( type-2T )
-EN 12004 ( C2T )`,
-    },
-    {
-      label: "Packing",
-      contentType: "paragraph",
-      content: `20kg bag`,
-    },
-    {
-      label: "Application",
-      contentType: "unordered_list",
-      content: `– Ideal for fixing ceramic & vitrified tiles on wall & floor and tile on tile application on floor.
-– For interior usage only.`,
-    },
-    {
-      label: "Guideline for usage",
-      contentType: "ordered_list",
-      content: `(1) Pre-wetting of substrate with maximum saturation of water but be sure that saturated surface is in dry condition.
-(2) Tiles should be free from dust & clean with brush.
-(3) Mix the product in water slowly ( powder:water ratio 4:1 approx. by weight)
-(4) Apply the paste on prepared surface and back of tile with required thickness & comb with notched trowel.
-(5) Place tiles & press firmly.
-(6) Remove excess paste from tile surface by using damp cloth.
-(7) Tiles setting should not be disturb for first 24 hrs & then allow for further process.`,
-    },
-    {
-      label: "Storage",
-      contentType: "paragraph",
-      content: `Store in a off ground, cool, dry area in factory sealed packaging, high humidity may reduce shelf life of product.`,
-    },
-  ];
+  const { product, category } = useParams();
+
+  const categoryDetails = ourProducts.find((cat) => cat.id === category);
+
+  const productInfo = categoryDetails.subProducts.find(
+    (prod) => prod.id == product
+  );
 
   const renderContent = (contentType, content) => {
     switch (contentType) {
@@ -71,6 +43,7 @@ EN 12004 ( C2T )`,
         return null;
     }
   };
+
   return (
     <>
       <div className="industify_fn_sidebarpage product_details">
@@ -81,7 +54,12 @@ EN 12004 ( C2T )`,
               {/* Single Service  */}
               <div className="industify_fn_service_single">
                 <div className="img_holder">
-                  <img src="/img/service/single/9.jpg" alt="" />
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={productInfo?.image}
+                    alt=""
+                  />
                 </div>
 
                 {/* Call to Action Shortcode (with corner)  */}
@@ -120,81 +98,37 @@ EN 12004 ( C2T )`,
             <div className="industify_fn_rightsidebar">
               <div className="product-description flex flex-col gap-5 mb-10 px-2 sm:px-0">
                 <div className=" text-5xl font-semibold text-theme-dark-cyan">
-                  Product Name
+                  {productInfo?.title}
                 </div>
-                {details.map(({ label, contentType, content }, index) => {
-                  return (
-                    <div key={index}>
-                      <div className="label font-semibold text-theme-dark-cyan text-lg">
-                        {label}
+                {productInfo.details?.map(
+                  ({ label, contentType, content }, index) => {
+                    return (
+                      <div key={index}>
+                        <div className="label font-semibold text-theme-dark-cyan text-lg">
+                          {label}
+                        </div>
+                        {renderContent(contentType, content)}
                       </div>
-                      {renderContent(contentType, content)}
-                    </div>
-                  );
-                })}
+                    );
+                  }
+                )}
               </div>
 
               {/* Check List Shortcode  */}
               <div className="fn_cs_check_list">
-                <div className=" text-3xl font-semibold mb-5">
+                <div className="text-3xl font-semibold mb-5">
                   Product Features
                 </div>
                 <div className="list">
                   <ul>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg text-theme-dark-cyan" />
-                        <p>CE Marking for Military Products</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Transparent Armor and Military Glass Testing</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Performance Testing</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Accelerated Stress Testing (AST)</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Failure Analysis for Metals and Non-Metals</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Non-Destructive Testing</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Mechanical Testing</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Aerospace Polymers and Plastics Testing</p>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="item">
-                        <Check className="fn__svg" />
-                        <p>Aerospace Composites Testing</p>
-                      </div>
-                    </li>
+                    {productInfo.features.map((feature, index) => (
+                      <li key={index}>
+                        <div className="item">
+                          <Check className="fn__svg text-theme-dark-cyan" />
+                          <p>{feature}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -207,7 +141,7 @@ EN 12004 ( C2T )`,
             {/* Main Sidebar: Right  */}
           </div>
           <div>.</div>
-          <div className="w-full bg-gray-300">
+          <div className="w-full min-h-56">
             <div className="text-5xl font-semibold">Related Products</div>
             {/* Products List Component */}
           </div>

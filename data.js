@@ -28,8 +28,59 @@ export const ourProducts = [
       {
         id: "f00-fixcon-eco",
         title: "F00 FIXCON ECO",
-        image: "",
+        image: "/img/service/single/9.jpg",
         description: "",
+        features: [
+          "CE Marking for Military Products",
+          "Transparent Armor and Military Glass Testing",
+          "Performance Testing",
+          "Accelerated Stress Testing (AST)",
+          "Failure Analysis for Metals and Non-Metals",
+          "Non-Destructive Testing",
+          "Mechanical Testing",
+          "Aerospace Polymers and Plastics Testing",
+          "Aerospace Composites Testing",
+        ],
+        details: [
+          {
+            label: "Description",
+            contentType: "paragraph",
+            content: `FIXCON is a polymer modified grey coloured cement base powder tile adhesive`,
+          },
+          {
+            label: "Standard",
+            contentType: "unordered_list",
+            content: `IS:15477 ( type-2T )
+      EN 12004 ( C2T )`,
+          },
+          {
+            label: "Packing",
+            contentType: "paragraph",
+            content: `20kg bag`,
+          },
+          {
+            label: "Application",
+            contentType: "unordered_list",
+            content: `– Ideal for fixing ceramic & vitrified tiles on wall & floor and tile on tile application on floor.
+      – For interior usage only.`,
+          },
+          {
+            label: "Guideline for usage",
+            contentType: "ordered_list",
+            content: `(1) Pre-wetting of substrate with maximum saturation of water but be sure that saturated surface is in dry condition.
+      (2) Tiles should be free from dust & clean with brush.
+      (3) Mix the product in water slowly ( powder:water ratio 4:1 approx. by weight)
+      (4) Apply the paste on prepared surface and back of tile with required thickness & comb with notched trowel.
+      (5) Place tiles & press firmly.
+      (6) Remove excess paste from tile surface by using damp cloth.
+      (7) Tiles setting should not be disturb for first 24 hrs & then allow for further process.`,
+          },
+          {
+            label: "Storage",
+            contentType: "paragraph",
+            content: `Store in a off ground, cool, dry area in factory sealed packaging, high humidity may reduce shelf life of product.`,
+          },
+        ],
       },
       {
         id: "f01-fixcon",

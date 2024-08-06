@@ -3,7 +3,7 @@ import Breadcumb from "@/layouts/breadcumb";
 import Layout from "@/layouts/layout";
 
 export const metadata = {
-  title: "Service Single Page 9",
+  title: "Product Info",
 };
 
 export default function page() {
