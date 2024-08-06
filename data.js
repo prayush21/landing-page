@@ -20,134 +20,180 @@ export const sliderData = [
 ];
 export const ourProducts = [
   {
+    id: "tile-adhesives",
     title: "Tile Adhesives",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "f00-fixcon-eco",
         title: "F00 FIXCON ECO",
         image: "",
+        description: "",
       },
       {
+        id: "f01-fixcon",
         title: "F01 FIXCON",
         image: "",
+        description: "",
       },
       {
+        id: "f02-fixcon-plus",
         title: "F02 FIXCON PLUS",
         image: "",
+        description: "",
       },
       {
+        id: "f03-fixcon",
         title: "F03 FIXCON",
         image: "",
+        description: "",
       },
       {
+        id: "f04-fixcon-plus",
         title: "F04 FIXCON PLUS",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "block-adhesives",
     title: "Block Adhesives",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "b01",
         title: "B01",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "tile-grout",
     title: "Tile Grout",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "maxbond-grout-admix",
         title: "MAXBOND - GROUT ADMIX",
         image: "",
+        description: "",
       },
       {
+        id: "t01-tile-grout",
         title: "T01 TILE GROUT",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "epoxy-grout",
     title: "Epoxy Grout",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "j01-sparkle",
         title: "J01-SPARKLE",
         image: "",
+        description: "",
       },
       {
+        id: "t02-solpoxy-epoxy-tile-grout-2-component",
         title: "T02 - SOLPOXY EPOXY TILE GROUT (2 component)",
         image: "",
+        description: "",
       },
       {
+        id: "t02-solpoxy-epoxy-tile-grout-3-component",
         title: "T02 - SOLPOXY EPOXY TILE GROUT (3 component)",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "epoxy-adhesive",
     title: "Epoxy Adhesive",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "soltile-epoxy-adhesive",
         title: "SOLTILE ( Epoxy adhesive )",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "waterproofing-segment",
     title: "Waterproofing Segment",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "sb-plus-solbond",
         title: "SB+ SOLBOND",
         image: "",
+        description: "",
       },
       {
+        id: "sb-plus-plus-solbondplusplus",
         title: "SB++ SOLBOND++",
         image: "",
+        description: "",
       },
       {
+        id: "sk-plus-solkare",
         title: "SK+ SOLKARE",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "tiles-cleaners",
     title: "Tiles Cleaners",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "t03-tile-power-tiles-cleaner",
         title: "T03 - TILE POWER TILES CLEANER",
         image: "",
+        description: "",
       },
     ],
   },
   {
+    id: "tile-fixing-accessories",
     title: "Tile Fixing Accessories",
     description: "",
-    image: "",
+    image: "/img/service/single/9.jpg",
     subProducts: [
       {
+        id: "tile-spacers",
         title: "TILE SPACERS",
         image: "",
+        description: "",
       },
       {
+        id: "tiles-leveling-kit",
         title: "TILES LEVELING KIT",
         image: "",
+        description: "",
       },
       {
+        id: "trowel",
         title: "TROWEL",
         image: "",
+        description: "",
       },
     ],
   },

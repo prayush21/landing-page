@@ -8,6 +8,7 @@ import {
   Twitter,
   Vk,
 } from "../public/svg/social/IconSocial";
+import { ourProducts } from "../data";
 
 const background = "/img/call.png";
 
@@ -90,53 +91,15 @@ export default function DesktopHeader() {
                 <Link href="/home5">Home</Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/services">Our Products</Link>
+                <Link href="/products">Our Products</Link>
                 <ul className="sub-menu">
-                  <li>
-                    <Link href="/services/serviceSinglePage9">
-                      Aerospace and Defense
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage8">
-                      Automative Manufacturing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage7">
-                      Chemical Industry
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage6">
-                      Oil and Gas Industry
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage5">
-                      Energy &#038; Commodities
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage4">
-                      Medical Devices
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage3">
-                      Housewares &#038; Home Decor
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage2">
-                      Textiles &#038; Apparel
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/serviceSinglePage1">
-                      Construction &#038; Engineering
-                    </Link>
-                  </li>
+                  {ourProducts.map((item) => {
+                    return (
+                      <li>
+                        <Link href={`/services/${item.id}`}>{item.title}</Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </li>
               {/* <li className="menu-item-has-children">
