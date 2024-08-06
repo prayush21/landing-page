@@ -26,7 +26,7 @@ export default function page() {
                             <div
                               className="img_abs"
                               style={{
-                                backgroundImage: `${item.image}`,
+                                backgroundImage: `url(${item.image})`,
                               }}
                             ></div>
                             <Link href={`/products/${item.id}`}></Link>
@@ -64,7 +64,7 @@ export default function page() {
                     {ourProducts.map((item) => {
                       return (
                         <li>
-                          <Link href="/services/serviceSinglePage9">
+                          <Link href={`/products/${item.id}`}>
                             {item.title}
                           </Link>
                         </li>
