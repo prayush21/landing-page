@@ -1,6 +1,6 @@
 import HomeSlider from "@/components/Home/HomeSlider";
 import Home2About from "@/components/Home2/Home2About";
-import Home2Blog from "@/components/Home2/Home2Blog";
+import Home3Service from "@/components/Home3/Home3Service";
 import Home2CTA from "@/components/Home2/Home2CTA";
 import Home2Hero from "@/components/Home2/Home2Hero";
 import Home2Info from "@/components/Home2/Home2Info";
@@ -18,38 +18,17 @@ export default function home5() {
   return (
     <>
       <Layout className={"nobglight"}>
-        {/* <!-- Hero Header --> */}
-        {/* <Home2Hero /> */}
         <HomeSlider />
-        {/* <!-- /Hero Header --> */}
 
-        {/* <!-- Info List --> */}
         <Home2Info />
-        {/* <!-- /Info List --> */}
 
-        {/* <!-- About Section --> */}
         <Home2About />
-        {/* <!-- /About Section --> */}
 
-        {/* <!-- Info & Rating --> */}
         <Home2InfoRating />
-        {/* <!-- /Info & Rating --> */}
 
-        {/* <!-- Project Sticky Shortcode --> */}
         <Home2Project />
-        {/* <!-- /Project Sticky Shortcode --> */}
 
-        {/* <!-- Service Section #2 --> */}
-        <Home2Service />
-        {/* <!-- /Service Section #2 --> */}
-
-        {/* <!-- Support Section --> */}
-        {/* <Home2Support /> */}
-        {/* <!-- /Support Section --> */}
-
-        {/* <!-- Blog Section --> */}
-        {/* <Home2Blog /> */}
-        {/* <!-- /Blog Section --> */}
+        <Home3Service />
       </Layout>
     </>
   );

@@ -18,3 +18,137 @@ export const sliderData = [
     backgroundImage: "img/slider/3.jpg",
   },
 ];
+export const ourProducts = [
+  {
+    title: "Tile Adhesives",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "F00 FIXCON ECO",
+        image: "",
+      },
+      {
+        title: "F01 FIXCON",
+        image: "",
+      },
+      {
+        title: "F02 FIXCON PLUS",
+        image: "",
+      },
+      {
+        title: "F03 FIXCON",
+        image: "",
+      },
+      {
+        title: "F04 FIXCON PLUS",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Block Adhesives",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "B01",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Tile Grout",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "MAXBOND - GROUT ADMIX",
+        image: "",
+      },
+      {
+        title: "T01 TILE GROUT",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Epoxy Grout",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "J01-SPARKLE",
+        image: "",
+      },
+      {
+        title: "T02 - SOLPOXY EPOXY TILE GROUT (2 component)",
+        image: "",
+      },
+      {
+        title: "T02 - SOLPOXY EPOXY TILE GROUT (3 component)",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Epoxy Adhesive",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "SOLTILE ( Epoxy adhesive )",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Waterproofing Segment",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "SB+ SOLBOND",
+        image: "",
+      },
+      {
+        title: "SB++ SOLBOND++",
+        image: "",
+      },
+      {
+        title: "SK+ SOLKARE",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Tiles Cleaners",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "T03 - TILE POWER TILES CLEANER",
+        image: "",
+      },
+    ],
+  },
+  {
+    title: "Tile Fixing Accessories",
+    description: "",
+    image: "",
+    subProducts: [
+      {
+        title: "TILE SPACERS",
+        image: "",
+      },
+      {
+        title: "TILES LEVELING KIT",
+        image: "",
+      },
+      {
+        title: "TROWEL",
+        image: "",
+      },
+    ],
+  },
+];
