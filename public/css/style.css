@@ -1274,7 +1274,22 @@ a:focus {
   padding-top: 120px;
   padding-bottom: 147px;
 }
-@media (max-width: 1200px) {
+.product_details .industify_fn_leftsidebar {
+  width: 400px;
+  float: left;
+  padding-right: 50px;
+  padding-top: 120px;
+  padding-bottom: 147px;
+}
+.product_details .industify_fn_rightsidebar {
+  width: calc(100% - 400px);
+  width: -moz-calc(100% - 400px);
+  width: -webkit-calc(100% - 400px);
+  float: right;
+  padding-top: 120px;
+  padding-bottom: 147px;
+}
+@media (max-width: 1200px) {  
   .industify_fn_leftsidebar {
     width: 100%;
     padding-right: 0;
@@ -1283,6 +1298,19 @@ a:focus {
     padding-right: 0;
     padding-top: 0;
     width: 100%;
+  }
+  .product_details .industify_fn_leftsidebar {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 2rem;
+  }
+  .product_details .industify_fn_rightsidebar {
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    width: 100%;    
   }
 }
 /*------------------------------------------------------------------*/
@@ -9539,27 +9567,27 @@ blockquote {
   width: 66.6666%;
   float: left;
 }
-.contact_alpha .left_in {
-  width: 100%;
-  background-color: #f6e3cf;
-  padding: 78px 60px 80px 60px;
-  height: 100%;
-  border-radius: 5px;
+.contact_alpha .left_in{
+	width: 100%;
+	background-color: #02b3c0;
+	padding: 78px 60px 80px 60px;
+	height: 100%;
+	border-radius: 5px;
 }
-.contact_alpha .contact_left h3 {
-  margin: 0;
-  padding: 0;
-  color: #7a5235;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 36px;
-  margin-bottom: 20px;
+.contact_alpha .contact_left h3{
+	margin: 0;
+	padding: 0;
+	color: white;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+	margin-bottom: 20px;
 }
-.contact_alpha .contact_left p {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  color: #a78e78;
+.contact_alpha .contact_left p{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: white;
 }
 .contact_alpha textarea,
 .contact_alpha input[type="text"],
@@ -9607,8 +9635,9 @@ blockquote {
   text-align: left;
   font-weight: 500;
 }
-.contact_alpha a:hover {
-  background-color: #1b8ed7;
+.contact_alpha a:hover{
+	background-color: #02b3c0;;
+	color: white;
 }
 .contact_alpha a {
   display: inline-block;
@@ -9635,9 +9664,9 @@ blockquote {
     padding: 28px 20px 30px 20px;
   }
 }
-.section_4 {
-  padding: 194px 0 200px 0;
-  border-top: 1px solid #ddd;
+.section_4{
+	padding-bottom: 2rem;
+	/* border-top: 1px solid #ddd; */
 }
 
 .section_5 {
@@ -9917,7 +9946,7 @@ blockquote {
   position: absolute;
   width: 18px;
   height: 18px;
-  color: #45a2df;
+  color: #01858c;
   top: 0px;
   left: 0px;
 }

@@ -18,3 +18,29 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@keyframes border-rotate {
+	0% {
+	  border-top-color: transparent;
+	  border-right-color: transparent;
+	  border-bottom-color: transparent;
+	  border-left-color: transparent;
+	}
+	25% {
+	  border-top-color: #00bcd4; /* theme-cyan */
+	}
+	50% {
+	  border-right-color: #00bcd4; /* theme-cyan */
+	}
+	75% {
+	  border-bottom-color: #00bcd4; /* theme-cyan */
+	}
+	100% {
+	  border-left-color: #00bcd4; /* theme-cyan */
+	}
+  }
+  
+  .border-rotate {
+	animation: border-rotate 1s linear forwards;
+  }
+  
