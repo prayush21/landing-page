@@ -7,7 +7,7 @@ import {
 } from "@/public/svg/service/IconService";
 import Link from "next/link";
 
-export default function Home3Service() {
+export default function JRHome3Service() {
   return (
     <>
       <div className="fn_cs_services_classic">
@@ -23,7 +23,7 @@ export default function Home3Service() {
             <ul>
               <li>
                 <div className="item">
-                  <Link href="/services/serviceSinglePage1"></Link>
+                  {/* <Link href="/services/serviceSinglePage1"></Link> */}
                   <span className="bg1"></span>
                   <span className="bg2"></span>
                   <span className="icon">
@@ -39,7 +39,7 @@ export default function Home3Service() {
               </li>
               <li>
                 <div className="item">
-                  <Link href="/services/serviceSinglePage2"></Link>
+                  {/* <Link href="/services/serviceSinglePage2"></Link> */}
                   <span className="bg1"></span>
                   <span className="bg2"></span>
                   <span className="icon">
@@ -55,7 +55,7 @@ export default function Home3Service() {
               </li>
               <li>
                 <div className="item">
-                  <Link href="/services/serviceSinglePage4"></Link>
+                  {/* <Link href="/services/serviceSinglePage4"></Link> */}
                   <span className="bg1"></span>
                   <span className="bg2"></span>
                   <span className="icon">

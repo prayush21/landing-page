@@ -1,7 +1,7 @@
 import { Arrow_r } from "@/public/svg/icon";
 import Link from "next/link";
 
-export default function Home2Project() {
+export default function JRHomeProduct() {
   return (
     <>
       <div className="fn_cs_project_sticky">
@@ -18,7 +18,7 @@ export default function Home2Project() {
                   providing the highest level of professionalism, service
                   response, and quality workmanship.
                 </p>
-                <Link href="portfolio">
+                <Link href="/products">
                   <span className="text">View All Products</span>
                   <span className="arrow">
                     <Arrow_r className="fn__svg" />

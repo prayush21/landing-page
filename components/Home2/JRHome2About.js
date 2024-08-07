@@ -1,4 +1,4 @@
-export default function Home2About() {
+export default function JRHome2About() {
   return (
     <>
       <div className="about_section">

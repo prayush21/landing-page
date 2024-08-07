@@ -1,7 +1,7 @@
 import { Checked } from "@/public/svg/icon";
 import React from "react";
 
-export default function Home2Info() {
+export default function JRHome2Info() {
   return (
     <>
       <div className="fn_cs_info_list full" data-cols="3">

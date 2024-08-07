@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import ModalVideo from "react-modal-video";
 
-export default function Home2InfoRating() {
+export default function JRHome2InfoRating() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -39,7 +39,7 @@ export default function Home2InfoRating() {
                 <div className="rating_holder">
                   <div className="r_header"></div>
                   <div className="r_footer"></div>
-                  <Link href="#"></Link>
+                  {/* <Link href="#"></Link> */}
                   <Stars className="fn__svg" />
                   <h3 className="rating_number">9.7</h3>
                   <h3 className="rating_text">Customer Rating</h3>

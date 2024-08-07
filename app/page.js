@@ -1,56 +1,31 @@
-import HomeAbout from "@/components/Home/HomeAbout";
-import HomeBlog from "@/components/Home/HomeBlog";
-import HomeCTA from "@/components/Home/HomeCTA";
-import HomePrinciples from "@/components/Home/HomePrinciples";
-import HomeProject from "@/components/Home/HomeProject";
-import HomeServices from "@/components/Home/HomeServices";
-import HomeSlider from "@/components/Home/HomeSlider";
-import HomeTetimonial from "@/components/Home/HomeTetimonial";
-import HomeWhyChooseUs from "@/components/Home/HomeWhyChooseUs";
 import Layout from "@/layouts/layout";
+import JRHomeProduct from "@/components/Home2/JRHomeProduct";
+import JRHomeSlider from "@/components/Home/JRHomeSlider";
+import JRHome2Info from "@/components/Home2/JRHome2Info";
+import JRHome2About from "@/components/Home2/JRHome2About";
+import JRHome2InfoRating from "@/components/Home2/JRHome2InfoRating";
+import JRHome3Service from "@/components/Home3/JRHome3Service";
 
+export const metadata = {
+  title: "Home",
+};
 
+export default function home5() {
+  return (
+    <>
+      <Layout className={"nobglight"}>
+        <JRHomeSlider />
 
-export default function Home() {
-    return (
-        <>
-            <Layout className={"transdark"}>
+        <JRHome2Info />
 
-                <HomeSlider />
+        <JRHome2About />
 
-                {/* <!-- Principles Modern --> */}
-                <HomePrinciples />
-                {/* <!-- /Principles Modern --> */}
+        <JRHome2InfoRating />
 
-                {/* <!-- About Section --> */}
-                <HomeAbout />
-                {/* <!-- /About Section --> */}
+        <JRHomeProduct />
 
-                {/* Services */}
-                <HomeServices />
-                {/* /Services */}
-
-                {/* <!-- Service Section --> */}
-                <HomeWhyChooseUs />
-                {/* <!-- /Service Section --> */}
-
-                {/* <!-- Call to Action --> */}
-                <HomeCTA />
-                {/* <!-- /Call to Action --> */}
-
-                {/* <!-- Testimonial Section --> */}
-                <HomeTetimonial />
-                {/* <!-- /Testimonial Section --> */}
-
-                {/* <!-- Project Sticky Full --> */}
-                <HomeProject />
-                {/* <!-- /Project Sticky Full --> */}
-
-                {/* <!-- Blog Section --> */}
-                <HomeBlog />
-                {/* <!-- /Blog Section --> */}
-
-            </Layout >
-        </>
-    )
+        <JRHome3Service />
+      </Layout>
+    </>
+  );
 }
