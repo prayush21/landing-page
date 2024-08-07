@@ -14,12 +14,14 @@ export default function JRHome2InfoRating() {
             <div className="left_part">
               <div className="title_holder">
                 <h3 className="l_title">
-                  World&apos;s Leading Industry Corporation
+                  Nation&apos;s Leading Industry Corporation
                 </h3>
                 <p className="l_desc">
-                  To further develop our corporate strengths we have established
-                  a corporate mandate to maintain strong core values that truly
-                  reflect the companys philosophy.
+                  JR Bond proudly holds multiple prestigious accreditations,
+                  underscoring our commitment to excellence. Our accolades
+                  include ISI Certificate, CE, ISO 9001;2015, which reflect our
+                  dedication to industry-leading standards and our unwavering
+                  focus on quality and expertise.”
                 </p>
               </div>
               <div

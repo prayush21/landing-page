@@ -10,18 +10,22 @@ export default function JRHome2About() {
                 <div className="title_holder">
                   <h3 className="title">Founder&#39;s Statement</h3>
                   <p>
-                    Industify is a pioneer in design-build specializing in
-                    engineering, architecture and construction services to both
-                    domestic and international customers. Founded in 1960,
-                    Industify is a family-owned company headquartered in
-                    Lexington, Ky. with offices across the U.S., Canada and
-                    Japan.
+                    Welcome to JR Bond, where excellence meets innovation. For
+                    20 years, we&#39;ve built a legacy of delivering top-tier
+                    construction solutions, including tile adhesives, block
+                    adhesives, epoxy grouts, and waterproofing products. Our
+                    mission has always been to provide unparalleled quality and
+                    service, driven by client feedback and a commitment to
+                    precision and reliability.
                   </p>
                   <p>
-                    To provide exceptional services to the insurance industry
-                    and thier clients, the property owner. We are committed to
-                    providing the highest level of professionalism, service
-                    response, and quality workmanship.
+                    Our diverse product lineup reflects our dedication to
+                    superior performance and durability, exceeding industry
+                    standards. As we celebrate two decades of success, we extend
+                    our gratitude to our clients whose trust and support have
+                    been central to our journey. We look forward to continuing
+                    to build a future defined by excellence and innovation
+                    together.
                   </p>
                 </div>
                 <div className="sign_holder">

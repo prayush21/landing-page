@@ -1,4 +1,5 @@
 "use client";
+import { ourProducts } from "@/data";
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -67,141 +68,33 @@ export default function JRHomeSlider() {
           }}
           className="custom-class"
         >
-          <SwiperSlide>
-            <div className="item">
-              <div
-                className="img_holder"
-                style={{ backgroundImage: `url(${slider1})` }}
-              ></div>
-              <div className="title_holder">
-                <div className="inner">
-                  <div className="in">
-                    <p>
-                      <span>Industry</span>
-                    </p>
-                    <h3>
-                      <span>Energy &amp; Commodities</span>
-                    </h3>
-                    <div className="desc">
-                      <span>
-                        Achieving this successfully calls for a vision of what
-                        can be and a distinct ability to identify opportunities
-                        for salvaging elements.
-                      </span>
+          {ourProducts.slice(0, 4).map(({ title, description, imgSrc }) => {
+            return (
+              <SwiperSlide key={title}>
+                <div className="item">
+                  <div
+                    className="img_holder"
+                    style={{ backgroundImage: `url(${imgSrc})` }}
+                  ></div>
+                  <div className="title_holder">
+                    <div className="inner">
+                      <div className="in">
+                        {/* <p>
+                          <span>Industry</span>
+                        </p> */}
+                        <h3>
+                          <span>{title}</span>
+                        </h3>
+                        <div className="desc">
+                          <span>{description}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="item">
-              <div
-                className="img_holder"
-                style={{ backgroundImage: `url(${slider2})` }}
-              ></div>
-              <div className="title_holder">
-                <div className="inner">
-                  <div className="in">
-                    <p>
-                      <span>Construction</span>
-                    </p>
-                    <h3>
-                      <span>New Construction</span>
-                    </h3>
-                    <div className="desc">
-                      <span>
-                        Industify was the first company to develop methods and
-                        equipment for the successful deep compaction of soil in
-                        the 1930s
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="item">
-              <div
-                className="img_holder"
-                style={{ backgroundImage: `url(${slider3})` }}
-              ></div>
-              <div className="title_holder">
-                <div className="inner">
-                  <div className="in">
-                    <p>
-                      <span>Modern</span>
-                    </p>
-                    <h3>
-                      <span>Small Projects &amp; Maintenance</span>
-                    </h3>
-                    <div className="desc">
-                      <span>
-                        In addition to our large, ground up projects, we
-                        accommodate small to modest sized projects for our
-                        customers.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="item">
-              <div
-                className="img_holder"
-                style={{ backgroundImage: `url(${slider4})` }}
-              ></div>
-              <div className="title_holder">
-                <div className="inner">
-                  <div className="in">
-                    <p>
-                      <span>Technology</span>
-                    </p>
-                    <h3>
-                      <span>Leed &amp; Green Building</span>
-                    </h3>
-                    <div className="desc">
-                      <span>
-                        Here at Industify, we take the same approach to green
-                        building that we take to every other aspect of our
-                        business.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="item">
-              <div
-                className="img_holder"
-                style={{ backgroundImage: `url(${slider5})` }}
-              ></div>
-              <div className="title_holder">
-                <div className="inner">
-                  <div className="in">
-                    <p>
-                      <span>Construction</span>
-                    </p>
-                    <h3>
-                      <span>Design Build</span>
-                    </h3>
-                    <div className="desc">
-                      <span>
-                        Industify Industry Services has both the experience and
-                        expertise to successfully complete your project using
-                        the highly effective design-build approach.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         {/* <!-- Alpha Slider: wrapper --> */}

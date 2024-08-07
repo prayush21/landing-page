@@ -5,7 +5,7 @@ import React from "react";
 const ContactCard = ({ icon, title, content }) => {
   return (
     <div className="group bg-white p-6 rounded-lg shadow-lg border-solid border-4 border-transparent hover:border-theme-cyan hover:scale-105 transition-all duration-300 text-center flex flex-col items-center">
-      <div className="my-4 border-solid border group-hover:border-theme-cyan border-transparent p-3 bg-gray-100 rounded-full">
+      <div className="my-4 border-solid border group-hover:bg-gray-200 border-transparent p-3 bg-gray-100 rounded-full">
         {icon}
       </div>
       <p className="font-semibold text-base">{title}</p>
@@ -32,7 +32,7 @@ const ContactInfo = () => {
               </svg>
             }
             title="Mail Here"
-            content="info@juniperforge.com"
+            content="Info@jrbondconchem.com"
           />
           <ContactCard
             icon={
@@ -48,7 +48,7 @@ const ContactInfo = () => {
               </svg>
             }
             title="Visit Here"
-            content="1141-42, Sun Gravitas, Near Shyamal Cross Road, Rajmani Society, Satellite, Ahmedabad, Gujarat 380015"
+            content="Bandhunagar, 8-A National Highway, Near Samsun Ceramic, Morbi-363642, Gujarat-BHARAT."
           />
           <ContactCard
             icon={
@@ -63,7 +63,7 @@ const ContactInfo = () => {
               </svg>
             }
             title="Call Here"
-            content="+91-9975469785"
+            content="+91 9879100037"
           />
         </div>
       </div>

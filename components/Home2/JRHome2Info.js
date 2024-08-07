@@ -23,7 +23,7 @@ export default function JRHome2Info() {
                     <Checked className="fn__svg" />
                   </span>
                   <h3>German Technology</h3>
-                  <p>The best that there is</p>
+                  <p>to get the best blend</p>
                 </div>
               </li>
               <li>
@@ -32,7 +32,7 @@ export default function JRHome2Info() {
                     <Checked className="fn__svg" />
                   </span>
                   <h3>Premuim Quality Product</h3>
-                  <p>In the constrution business</p>
+                  <p>with excellence in each molecule</p>
                 </div>
               </li>
             </ul>

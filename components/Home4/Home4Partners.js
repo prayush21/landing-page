@@ -9,9 +9,13 @@ export default function Home4Partners() {
             <div className="contact_in">
               <div className="contact_left">
                 <div className="left_in">
-                  <h3>Do you want to be in our clients list?</h3>
-                  <p>
-                    You have a very good chance right now. Don’t miss it out
+                  <div className="m-0 p-0 text-6xl text-white font-light pb-3.5 mb-8">
+                    Get in <span className="font-semibold">Touch</span>
+                  </div>
+                  <p className=" font-normal">
+                    If you’ve got questions or ideas you would like to share,
+                    send a message. For anything more specific, please use one
+                    of the addresses listed below.
                   </p>
                 </div>
               </div>

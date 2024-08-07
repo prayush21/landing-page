@@ -41,6 +41,40 @@ export default function ProductInfo() {
             ))}
           </ol>
         );
+      case "table":
+        return (
+          <div className="overflow-x-auto my-4">
+            {content.title}
+            <table className="min-w-full bg-white border border-gray-200">
+              <thead>
+                <tr>
+                  {content.headers.map((header, index) => (
+                    <th
+                      key={index}
+                      className="px-6 py-3 border-b-2 w-min border-gray-300 text-left text-nowrap leading-4 text-gray-800 tracking-wider"
+                    >
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {content.rows.map((row, rowIndex) => (
+                  <tr key={rowIndex}>
+                    {row.map((cell, cellIndex) => (
+                      <td
+                        key={cellIndex}
+                        className="px-6 py-4 border-b border-gray-200 "
+                      >
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
       default:
         return null;
     }
@@ -117,23 +151,26 @@ export default function ProductInfo() {
               </div>
 
               {/* Check List Shortcode  */}
-              <div className="fn_cs_check_list">
-                <div className="text-3xl font-semibold mb-5">
-                  Product Features
+              {productInfo.features && productInfo.features.length > 0 && (
+                <div className="fn_cs_check_list">
+                  <div className="text-3xl font-semibold mb-5">
+                    Product Features
+                  </div>
+                  <div className="list">
+                    <ul>
+                      {productInfo.features?.map((feature, index) => (
+                        <li key={index}>
+                          <div className="item">
+                            <Check className="fn__svg text-theme-dark-cyan" />
+                            <p>{feature}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="list">
-                  <ul>
-                    {productInfo.features.map((feature, index) => (
-                      <li key={index}>
-                        <div className="item">
-                          <Check className="fn__svg text-theme-dark-cyan" />
-                          <p>{feature}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              )}
+
               {/* Check List Shortcode  */}
 
               {/* Get Sidebar  */}
@@ -143,7 +180,7 @@ export default function ProductInfo() {
             {/* Main Sidebar: Right  */}
           </div>
           <div className="w-full min-h-56 related_products">
-            <div className="m-0 p-0 text-6xl leading-none tracking-normal text-[#041230] font-light pb-3.5 relative mb-8">
+            <div className="m-0 p-0 text-6xl text-[#041230] font-light pb-3.5 mb-8">
               Related Products
             </div>
             <div className="industify_fn_leftsidebar">
