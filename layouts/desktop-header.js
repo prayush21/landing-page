@@ -96,7 +96,7 @@ export default function DesktopHeader() {
                   {ourProducts.map((item) => {
                     return (
                       <li>
-                        <Link href={`/services/${item.id}`}>{item.title}</Link>
+                        <Link href={`/products/${item.id}`}>{item.title}</Link>
                       </li>
                     );
                   })}
