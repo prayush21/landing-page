@@ -1,4 +1,4 @@
-import ServiceSingle9 from "@/components/Services/ServiceSingle9";
+import ProductInfo from "@/components/Product/ProductInfo";
 import Breadcumb from "@/layouts/breadcumb";
 import Layout from "@/layouts/layout";
 
@@ -9,11 +9,8 @@ export const metadata = {
 export default function page() {
   return (
     <Layout>
-      <Breadcumb
-        firstChild={"Services"}
-        SecondChild={"Service Single Page 9"}
-      />
-      <ServiceSingle9 />
+      <Breadcumb firstChild={"Products"} SecondChild={"Product Details"} />
+      <ProductInfo />
     </Layout>
   );
 }

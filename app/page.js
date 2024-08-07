@@ -5,12 +5,13 @@ import JRHome2Info from "@/components/Home2/JRHome2Info";
 import JRHome2About from "@/components/Home2/JRHome2About";
 import JRHome2InfoRating from "@/components/Home2/JRHome2InfoRating";
 import JRHome3Service from "@/components/Home3/JRHome3Service";
+import Home3Introduce from "@/components/Home3/Home3Introduce";
 
 export const metadata = {
   title: "Home",
 };
 
-export default function home5() {
+export default function home() {
   return (
     <>
       <Layout className={"nobglight"}>

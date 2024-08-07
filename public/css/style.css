@@ -1287,7 +1287,14 @@ a:focus {
   width: -webkit-calc(100% - 400px);
   float: right;
   padding-top: 120px;
-  padding-bottom: 147px;
+  padding-bottom: 2rem;
+}
+.related_products .industify_fn_leftsidebar {
+  width: 100%;
+  float: left;
+  padding-right: 50px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 @media (max-width: 1200px) {  
   .industify_fn_leftsidebar {

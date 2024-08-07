@@ -9,6 +9,7 @@ import {
   Twitter,
   Vk,
 } from "../public/svg/social/IconSocial";
+import { ourProducts } from "@/data";
 
 export default function MobileHeader() {
   const [isMobileMenu, setMobileMenu] = useState(false);
@@ -105,7 +106,7 @@ export default function MobileHeader() {
             <nav>
               <ul className="mmenu">
                 <li>
-                  <Link href="/home5">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
                   <Link
@@ -122,51 +123,15 @@ export default function MobileHeader() {
                       display: `${isActive.key == 2 ? "block" : "none"}`,
                     }}
                   >
-                    <li>
-                      <Link href="/services/serviceSinglePage9">
-                        Aerospace and Defense
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage8">
-                        Automative Manufacturing
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage7">
-                        Chemical Industry
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage6">
-                        Oil and Gas Industry
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage5">
-                        Energy &#038; Commodities
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage4">
-                        Medical Devices
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage3">
-                        Housewares &#038; Home Decor
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage2">
-                        Textiles &#038; Apparel
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/services/serviceSinglePage1">
-                        Construction &#038; Engineering
-                      </Link>
-                    </li>
+                    {ourProducts.map((item) => {
+                      return (
+                        <li key={item.id}>
+                          <Link href={`/products/${item.id}`}>
+                            {item.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
                 <li>

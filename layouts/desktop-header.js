@@ -88,14 +88,14 @@ export default function DesktopHeader() {
           <div className="menu_nav">
             <ul className="industify_fn_main_nav vert_nav">
               <li>
-                <Link href="/home5">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li className="menu-item-has-children">
                 <Link href="/products">Our Products</Link>
                 <ul className="sub-menu">
                   {ourProducts.map((item) => {
                     return (
-                      <li>
+                      <li key={item.id}>
                         <Link href={`/products/${item.id}`}>{item.title}</Link>
                       </li>
                     );

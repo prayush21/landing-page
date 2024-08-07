@@ -1,4 +1,4 @@
-import Home2About from "@/components/Home2/Home2About";
+import JRHome2About from "@/components/Home2/JRHome2About";
 
 import Home3Introduce from "@/components/Home3/Home3Introduce";
 import Home2Service from "@/components/Home2/Home2Service";
@@ -16,7 +16,7 @@ export default function home5() {
       <Layout className={"nobglight"}>
         <Home3Hero />
         <Home3Introduce />
-        <Home2About />
+        <JRHome2About />
         <Home2Service />
         <Home2Service2 />
       </Layout>

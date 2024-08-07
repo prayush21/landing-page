@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ourProducts } from "../../../data";
 import { useParams, useRouter } from "next/navigation";
 
-export default function page() {
+export default function Page() {
   const { category } = useParams();
   const data = ourProducts.find((product) => product.id === category);
 
@@ -67,7 +67,7 @@ export default function page() {
                   <ul>
                     {ourProducts.map((item) => {
                       return (
-                        <li>
+                        <li key={item.id}>
                           <Link href={`/products/${item.id}`}>
                             {item.title}
                           </Link>
