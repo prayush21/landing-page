@@ -9,8 +9,8 @@ import {
   Vk,
 } from "../public/svg/social/IconSocial";
 import { ourProducts } from "../data";
-
-const background = "/img/call.png";
+import Image from "next/image";
+import LogoImage from "@/public/Images/logo-transparent.png";
 
 export default function DesktopHeader() {
   // const [isActive, setActive] = useState(false);
@@ -73,7 +73,7 @@ export default function DesktopHeader() {
         <div className="header_inner">
           <div className="menu_logo">
             <Link href="/">
-              <img
+              {/* <img
                 className="desktop_logo"
                 src="/img/logo-light.png"
                 alt="Industry HTML Template"
@@ -82,6 +82,13 @@ export default function DesktopHeader() {
                 className="desktop_logo_dark"
                 src="/img/logo-dark.png"
                 alt="Industry HTML Template"
+              /> */}
+              <Image
+                style={{ width: "250px", height: "300px", objectFit: "cover" }}
+                src={LogoImage}
+                width={400}
+                height={300}
+                alt="jrbond-logo-image"
               />
             </Link>
           </div>

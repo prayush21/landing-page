@@ -1,6 +1,48 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home4Partners() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert(result.message);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error sending the message, please try again.");
+    }
+  };
+
   return (
     <>
       <div className="section_4">
@@ -12,7 +54,7 @@ export default function Home4Partners() {
                   <div className="m-0 p-0 text-6xl text-white font-light pb-3.5 mb-8">
                     Get in <span className="font-semibold">Touch</span>
                   </div>
-                  <p className=" font-normal">
+                  <p className="font-normal">
                     If you’ve got questions or ideas you would like to share,
                     send a message. For anything more specific, please use one
                     of the addresses listed below.
@@ -22,14 +64,9 @@ export default function Home4Partners() {
               <div className="contact_right">
                 <form
                   className="contact_form"
-                  action="/"
-                  method="post"
+                  onSubmit={handleSubmit}
                   autoComplete="off"
-                  data-email=""
                 >
-                  {/* Don't remove below code in avoid to work contact form properly.
-                    You can chance dat-success value with your one. It will be used when user will try to contact via contact form and will get success message. */}
-
                   <div
                     className="success"
                     data-success="Your message has been received, we will contact you soon."
@@ -37,22 +74,40 @@ export default function Home4Partners() {
                   <div className="empty_notice">
                     <span>Please Fill Required Fields</span>
                   </div>
-                  {/* <!-- --> */}
-
                   <div className="items">
                     <div className="item">
-                      <input id="name" type="text" placeholder="Name" />
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                      />
                     </div>
                     <div className="item">
-                      <input id="email" type="email" placeholder="Email" />
+                      <input
+                        id="email"
+                        type="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
                     </div>
                     <div className="item">
-                      <textarea id="message" placeholder="Message"></textarea>
+                      <textarea
+                        id="message"
+                        placeholder="Message"
+                        value={formData.message}
+                        onChange={handleChange}
+                      ></textarea>
                     </div>
                     <div className="item">
-                      <Link href="#" id="send_message">
+                      <button
+                        type="submit"
+                        class="inline-block h-12 leading-[50px] px-5 bg-black text-white rounded-sm no-underline hover:bg-theme-cyan"
+                      >
                         Send Message
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </form>

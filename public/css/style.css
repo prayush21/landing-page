@@ -578,7 +578,7 @@ a:focus {
   align-items: center;
 }
 .industify_fn_header .menu_logo a {
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
   text-decoration: none;
   height: 100%;
   display: flex;
@@ -1030,6 +1030,11 @@ a:focus {
 /*	4.1 NAVIGATION SKIN
 /*------------------------------------------------------------------*/
 /* dark */
+[data-nav-skin="dark"] .industify_fn_header .menu_logo {
+  background-color: #0d0d0d;
+  border-bottom: none;
+  filter: invert(100%);
+}
 [data-nav-skin="dark"] .industify_fn_header {
   background-color: #0d0d0d;
   border-bottom: none;
@@ -1106,6 +1111,10 @@ a:focus {
 }
 
 /* nobglight */
+[data-nav-skin="nobglight"] .industify_fn_header .menu_logo{
+  filter: invert(100%);
+}
+
 [data-nav-skin="nobglight"] .industify_fn_header {
   position: absolute;
   border-bottom-color: rgba(255, 255, 255, 0.1);
@@ -4127,7 +4136,7 @@ blockquote {
   .industify_slider_alpha .title_holder {
     left: 0px;
     right: 0px;
-    bottom: 60px;
+    bottom: 15rem;
   }
   .industify_slider_alpha .owl_control > div {
     width: 50%;

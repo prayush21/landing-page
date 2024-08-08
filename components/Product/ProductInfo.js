@@ -12,10 +12,12 @@ export default function ProductInfo() {
 
   const categoryData = ourProducts.find((product) => product.id === category);
 
-  const categoryDetails = ourProducts.find((cat) => cat.id === category);
-
-  const productInfo = categoryDetails.subProducts.find(
+  const productInfo = categoryData.subProducts.find(
     (prod) => prod.id == product
+  );
+
+  const relatedProducts = categoryData.subProducts.filter(
+    ({ id }) => id != productInfo.id
   );
 
   const renderContent = (contentType, content) => {
@@ -51,7 +53,7 @@ export default function ProductInfo() {
                   {content.headers.map((header, index) => (
                     <th
                       key={index}
-                      className="px-6 py-3 border-b-2 w-min border-gray-300 text-left text-nowrap leading-4 text-gray-800 tracking-wider"
+                      className="px-6 py-3 border-b-2 w-min border-gray-300 font-semibold text-left text-nowrap leading-4 text-gray-800 tracking-wider"
                     >
                       {header}
                     </th>
@@ -64,7 +66,7 @@ export default function ProductInfo() {
                     {row.map((cell, cellIndex) => (
                       <td
                         key={cellIndex}
-                        className="px-6 py-4 border-b border-gray-200 "
+                        className="px-6 py-4 border-b text-gray-500 border-gray-200 "
                       >
                         {cell}
                       </td>
@@ -179,54 +181,56 @@ export default function ProductInfo() {
             </div>
             {/* Main Sidebar: Right  */}
           </div>
-          <div className="w-full min-h-56 related_products">
-            <div className="m-0 p-0 text-6xl text-[#041230] font-light pb-3.5 mb-8">
-              Related Products
-            </div>
-            <div className="industify_fn_leftsidebar">
-              <ul className="industify_fn_service_list grid grid-cols-2 gap-8">
-                {categoryData.subProducts.map((item) => {
-                  return (
-                    <div className="" key={item.id}>
-                      <div className="item">
-                        <div className="item_in">
-                          <div className="img_holder">
-                            <div
-                              className="img_abs"
-                              style={{
-                                backgroundImage: `url(${item.image})`,
-                              }}
-                            ></div>
-                            <Link
-                              href={`/products/${categoryData.id}/${item.id}`}
-                            ></Link>
-                          </div>
-                          <div className="title">
-                            <h3>
+          {relatedProducts && relatedProducts.length > 0 && (
+            <div className="w-full min-h-56 related_products">
+              <div className="m-0 p-0 text-6xl text-[#041230] font-light pb-3.5 mb-8">
+                Related Products
+              </div>
+              <div className="industify_fn_leftsidebar">
+                <ul className="industify_fn_service_list grid grid-cols-2 gap-8">
+                  {relatedProducts.map((item) => {
+                    return (
+                      <div className="" key={item.id}>
+                        <div className="item">
+                          <div className="item_in">
+                            <div className="img_holder">
+                              <div
+                                className="img_abs"
+                                style={{
+                                  backgroundImage: `url(${item.image})`,
+                                }}
+                              ></div>
+                              <Link
+                                href={`/products/${categoryData.id}/${item.id}`}
+                              ></Link>
+                            </div>
+                            <div className="title">
+                              <h3>
+                                <Link
+                                  href={`/products/${categoryData.id}/${item.id}`}
+                                >
+                                  {item.title.toUpperCase()}
+                                </Link>
+                              </h3>
+                              <p>{item.description}</p>
+                            </div>
+                            <div className="read_more">
                               <Link
                                 href={`/products/${categoryData.id}/${item.id}`}
                               >
-                                {item.title.toUpperCase()}
+                                Read More
                               </Link>
-                            </h3>
-                            <p>{item.description}</p>
-                          </div>
-                          <div className="read_more">
-                            <Link
-                              href={`/products/${categoryData.id}/${item.id}`}
-                            >
-                              Read More
-                            </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                })}
-              </ul>
+                    );
+                  })}
+                </ul>
+              </div>
+              {/* Products List Component */}
             </div>
-            {/* Products List Component */}
-          </div>
+          )}
           <div>.</div>
         </div>
       </div>

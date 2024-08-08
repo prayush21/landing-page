@@ -14,10 +14,13 @@ export default function JRHomeProduct() {
                   Our latest <span>Products</span>
                 </h3>
                 <p>
-                  To provide exceptional services to the insurance industry and
-                  thier clients, the property owner. We are committed to
-                  providing the highest level of professionalism, service
-                  response, and quality workmanship.
+                  Discover JR Bond&#39;s latest innovations in tile and adhesive
+                  solutions, featuring our new range of Tile Grout, Epoxy Grout,
+                  Epoxy Adhesive, and Waterproofing Segment. These products are
+                  meticulously engineered to offer superior bonding, enhanced
+                  durability, and exceptional water resistance, ensuring your
+                  construction and renovation projects achieve the highest
+                  standards of quality and longevity.
                 </p>
                 <Link href="/products">
                   <span className="text">View All Products</span>

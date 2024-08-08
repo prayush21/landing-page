@@ -38,6 +38,7 @@ const mapObj = {
   "tile-spacers": "TILE SPACERS",
   "tiles-leveling-kit": "TILES LEVELING KIT",
   trowel: "TROWEL",
+  "waterproofing-segment": "Waterproofing Segment",
 };
 
 export default function Breadcrumb() {

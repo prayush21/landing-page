@@ -2,6 +2,7 @@ import Layout from "@/layouts/layout";
 import Sidebar from "@/layouts/sidebar";
 import Link from "next/link";
 import { ourProducts } from "../../data";
+import Breadcrumb from "@/layouts/breadcumb";
 
 export const metadata = {
   title: "Services",
@@ -10,7 +11,7 @@ export const metadata = {
 export default function page() {
   return (
     <Layout>
-      {/*    <Breadcumb firstChild={"Services"} /> */}
+      <Breadcrumb firstChild={"Services"} />
       <div className="industify_fn_sidebarpage">
         <div className="container">
           <div className="s_inner">
@@ -63,7 +64,7 @@ export default function page() {
                   <ul>
                     {ourProducts.map((item) => {
                       return (
-                        <li>
+                        <li key={item.id}>
                           <Link href={`/products/${item.id}`}>
                             {item.title}
                           </Link>

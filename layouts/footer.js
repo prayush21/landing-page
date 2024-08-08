@@ -1,4 +1,6 @@
 import Link from "next/link";
+import LogoImage from "@/public/Images/logo-transparent.png";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -18,10 +20,16 @@ export default function Footer() {
                     <div className="item">
                       <div className="logo">
                         <Link href="/">
-                          <img src="/img/logo-light.png" alt="" />
+                          <Image
+                            className="h-16 w-56 object-cover invert m-auto"
+                            width={400}
+                            height={200}
+                            src={LogoImage}
+                            alt=""
+                          />
                         </Link>
                       </div>
-                      <div className="textwidget">
+                      <div className="textwidget ml-8">
                         <p>
                           We are focused on user-driven outcomes, we strive to
                           create meaningful connections for users through

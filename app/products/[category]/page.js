@@ -4,6 +4,7 @@ import Sidebar from "@/layouts/sidebar";
 import Link from "next/link";
 import { ourProducts } from "../../../data";
 import { useParams, useRouter } from "next/navigation";
+import Breadcrumb from "@/layouts/breadcumb";
 
 export default function Page() {
   const { category } = useParams();
@@ -11,7 +12,7 @@ export default function Page() {
 
   return (
     <Layout>
-      {/*    <Breadcumb firstChild={"Services"} /> */}
+      <Breadcrumb />
       <div className="industify_fn_sidebarpage">
         <div className="container">
           <div className="s_inner">

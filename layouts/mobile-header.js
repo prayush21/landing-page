@@ -10,6 +10,8 @@ import {
   Vk,
 } from "../public/svg/social/IconSocial";
 import { ourProducts } from "@/data";
+import Image from "next/image";
+import LogoImage from "@/public/Images/logo-transparent.png";
 
 export default function MobileHeader() {
   const [isMobileMenu, setMobileMenu] = useState(false);
@@ -80,7 +82,14 @@ export default function MobileHeader() {
           <div className="in">
             <div className="menu_logo">
               <Link href="/">
-                <img src="/img/logo-light.png" alt="Industry Template" />
+                <Image
+                  className="invert 10 object-cover"
+                  style={{ height: "64px" }}
+                  height={200}
+                  width={400}
+                  src={LogoImage}
+                  alt="Industry Template"
+                />
               </Link>
             </div>
             <div

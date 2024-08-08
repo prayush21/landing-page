@@ -9,7 +9,7 @@ export const metadata = {
 export default function page() {
   return (
     <Layout>
-      <Breadcumb firstChild={"Products"} SecondChild={"Product Details"} />
+      <Breadcumb />
       <ProductInfo />
     </Layout>
   );
