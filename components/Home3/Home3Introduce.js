@@ -24,12 +24,15 @@ export default function Home3Introduce() {
                 <h5>Let Me Introduce</h5>
                 <h3>Our Company</h3>
                 <p>
-                  For over 47 years, the Industify family has been building
-                  relationships and projects that last. We build safe
-                  environments and eco-friendly solutions in the communities in
-                  which we work. Most importantly, we build strong relationships
-                  that allow us to build anything, anywhere. No matter the job,
-                  we go beyond building.
+                  Since its inception, JR Bond has been at the forefront of the
+                  tile adhesive industry, bringing over a decade of experience
+                  and expertise to the market. Founded on the principles of
+                  innovation, quality, and customer-centricity, JR Bond has
+                  consistently pushed the boundaries to deliver products that
+                  meet the evolving needs of the construction and tiling
+                  sectors. Our journey began with a clear mission: to create
+                  adhesive solutions that not only meet but exceed industry
+                  standards.
                 </p>
               </div>
               <div className="badge_holder">

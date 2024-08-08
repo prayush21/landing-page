@@ -13,14 +13,16 @@ export default function Home3Hero() {
         <div className="container">
           <div className="content_holder max800">
             <div className="title_holder">
-              <h3>A Global Leader in Automotive Seating &amp; E-Systems.</h3>
+              <h3>Crafting Excellence, One Tile at a Time</h3>
               <p>
-                Industify Corporation is ranked #07 on the Fortune 500 with
-                world-class products designed, engineered and manufactured by a
-                diverse team of talented employees. Our vision is to be
-                consistently recognized as the supplier of choice, an employer
-                of choice, the investment of choice and a company that supports
-                the communities where we do business.
+                At JR Bond, we are committed to delivering top-tier adhesive
+                solutions that stand the test of time. With a focus on
+                innovation, quality, and customer satisfaction, we have carved
+                out a reputation as a leader in the tile adhesive industry. Our
+                range of products, from Tile Grout to Epoxy Adhesives, is
+                engineered to meet the highest standards of durability and
+                performance, ensuring that every project, big or small, achieves
+                lasting excellence.
               </p>
             </div>
           </div>

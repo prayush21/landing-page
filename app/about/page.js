@@ -1,8 +1,8 @@
 import JRHome2About from "@/components/Home2/JRHome2About";
 
 import Home3Introduce from "@/components/Home3/Home3Introduce";
-import Home2Service from "@/components/Home2/Home2Service";
-import Home2Service2 from "@/components/Home2/Home2Service2";
+import ValuesComponent from "@/components/Home2/ValuesComponent";
+import StrengthsComponent from "@/components/Home2/StrengthsComponent";
 import Home3Hero from "@/components/Home3/Home3Hero";
 import Layout from "@/layouts/layout";
 
@@ -17,8 +17,8 @@ export default function home5() {
         <Home3Hero />
         <Home3Introduce />
         <JRHome2About />
-        <Home2Service />
-        <Home2Service2 />
+        <ValuesComponent />
+        <StrengthsComponent />
       </Layout>
     </>
   );
