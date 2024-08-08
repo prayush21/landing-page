@@ -16,6 +16,7 @@ import LogoImage from "@/public/Images/logo-transparent.png";
 export default function MobileHeader() {
   const [isMobileMenu, setMobileMenu] = useState(false);
   const MobileMenuTrueFalse = () => setMobileMenu(!isMobileMenu);
+  const [subActive, setSubActive] = useState({ status: false, key: "" });
 
   const [isActive, setIsActive] = useState({
     status: false,
@@ -32,6 +33,14 @@ export default function MobileHeader() {
         status: true,
         key,
       });
+    }
+  };
+
+  const handleSubToggle = (key) => {
+    if (subActive.key === key) {
+      setSubActive({ status: false, key: "" });
+    } else {
+      setSubActive({ status: true, key });
     }
   };
 
@@ -132,15 +141,37 @@ export default function MobileHeader() {
                       display: `${isActive.key == 2 ? "block" : "none"}`,
                     }}
                   >
-                    {ourProducts.map((item) => {
-                      return (
-                        <li key={item.id}>
-                          <Link href={`/products/${item.id}`}>
-                            {item.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
+                    {ourProducts.map((item) => (
+                      <li key={item.id}>
+                        <Link
+                          href="#"
+                          className={`has-arrow ${
+                            subActive.key === item.id ? "mm-active" : ""
+                          }`}
+                          onClick={() => handleSubToggle(item.id)}
+                        >
+                          {item.title}
+                        </Link>
+                        <ul
+                          className="px-2 text-sm"
+                          style={{
+                            display: `${
+                              subActive.key === item.id ? "block" : "none"
+                            }`,
+                          }}
+                        >
+                          {item.subProducts?.map((subProduct) => (
+                            <li key={subProduct.id}>
+                              <Link
+                                href={`/products/${item.id}/${subProduct.id}`}
+                              >
+                                {subProduct.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    ))}
                   </ul>
                 </li>
                 <li>

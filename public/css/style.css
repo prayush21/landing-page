@@ -853,8 +853,8 @@ a:focus {
   transform: translateY(20px) scale(0.8);
 }
 .industify_fn_header .vert_nav ul:after {
-  border-top: 20px solid #111;
-  border-right: 230px solid transparent;
+  /* border-top: 20px solid #111;
+  border-right: 230px solid transparent; */
   content: "";
   position: absolute;
   top: 100%;
@@ -892,8 +892,8 @@ a:focus {
   opacity: 1;
 }
 .industify_fn_header .vert_nav li > ul:after {
-  content: "";
-  border-right: 260px solid transparent;
+  /* content: ""; */
+  /* border-right: 260px solid transparent; */
 }
 .industify_fn_header .menu_nav .sub-menu ul,
 .industify_fn_header .vert_nav > li > ul {
@@ -1229,7 +1229,7 @@ a:focus {
   font-weight: 600;
 }
 .industify_fn_breadcrumbs a:hover {
-  color: #d24e1a;
+  color: #01b5bf;
 }
 .industify_fn_breadcrumbs .separator span {
   width: 33px;
@@ -1306,6 +1306,26 @@ a:focus {
   padding-bottom: 2rem;
 }
 @media (max-width: 1200px) {  
+  .related_products .industify_fn_leftsidebar {
+    width: 100%;
+    float: left;
+    padding-right: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .related_products .industify_fn_leftsidebar {
+    width: 100%;
+    float: left;
+    padding-right: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .related_products .industify_fn_service_list .item_in{
+    padding: 0.5rem;
+  }
+  .related_products .industify_fn_service_list .title h3 a{
+    font-size: 20px;
+  }
   .industify_fn_leftsidebar {
     width: 100%;
     padding-right: 0;
@@ -8119,6 +8139,7 @@ blockquote {
 @media (max-width: 1040px) {
   .fn_cs_services_classic li {
     width: 50%;
+    padding: 1rem;
   }
   .fn_cs_services_classic li:nth-of-type(2n) .bg1 {
     display: none;
@@ -8133,6 +8154,7 @@ blockquote {
   }
   .fn_cs_services_classic li {
     width: 100%;
+    padding: 1rem;
   }
   .fn_cs_services_classic .bg1 {
     display: block !important;

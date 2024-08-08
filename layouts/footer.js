@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LogoImage from "@/public/Images/logo-transparent.png";
 import Image from "next/image";
+import { ourProducts } from "@/data";
 
 export default function Footer() {
   return (
@@ -41,54 +42,40 @@ export default function Footer() {
                   <li>
                     <div className="item">
                       <div className="wid-title">
-                        <span>Business Hours</span>
+                        <span>Our Products</span>
                       </div>
-                      <div className="industify_fn_widget_business_hours">
-                        <div>
-                          <ul>
-                            <li>
-                              <div className="day_item">
-                                <span className="day">Monday-Friday:</span>
-                                <span className="hours">9am to 5pm</span>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="day_item">
-                                <span className="day">Saturday:</span>
-                                <span className="hours">10am to 3pm</span>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="day_item">
-                                <span className="day">Sunday:</span>
-                                <span className="hours">Closed</span>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
+                      <div className="widget_nav_menu">
+                        <ul className="menu">
+                          {ourProducts.map((category) => {
+                            return (
+                              <li key={category.id}>
+                                <Link
+                                  className="hover:underline"
+                                  href={`/${category.id}`}
+                                >
+                                  {category.title}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
                       </div>
                     </div>
                   </li>
                   <li>
-                    <div className="item">
+                    <div className="item flex flex-col gap-2">
                       <div className="wid-title">
                         <span>Helpful Links</span>
                       </div>
-                      <div className="widget_nav_menu">
-                        <ul className="menu">
-                          <li>
-                            <Link href="/portfolio">Our Products</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Disclaimer</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Showcase</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Privacy Policy</Link>
-                          </li>
-                        </ul>
+                      <div className="text-white">
+                        Let&#39;s Connect and Build Together
+                      </div>
+                      <div className="">
+                        <Link href="/contact">
+                          <button className="py-2 px-4 bg-theme-cyan text-white rounded">
+                            Contact Us
+                          </button>
+                        </Link>
                       </div>
                     </div>
                   </li>
@@ -99,7 +86,7 @@ export default function Footer() {
           {/* <!-- /TRIPLE WIDGET --> */}
         </div>
         {/* <!-- BOTTOM --> */}
-        <div className="footer_bottom">
+        {/* <div className="footer_bottom">
           <div className="container">
             <div className="footer_bottom_in">
               <div className="bottom_widget">
@@ -124,7 +111,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <!-- /BOTTOM --> */}
       </footer>
     </>

@@ -11,78 +11,20 @@ import {
 import { ourProducts } from "../data";
 import Image from "next/image";
 import LogoImage from "@/public/Images/logo-transparent.png";
+import { Arrow_r, DownChevron, RightChevron } from "@/public/svg/icon";
 
 export default function DesktopHeader() {
-  // const [isActive, setActive] = useState(false);
-  // const activeTrueFalse = () => setActive(!isActive)
-  // const [isSelect, setSelect] = useState("USD");
-
-  const [isToggled, setToggled] = useState(false);
-  const toggleTrueFalse = () => setToggled(!isToggled);
-
-  const [isSelect, setSelect] = useState("ENG");
+  const [openProductId, setOpenProductId] = useState(null); // Manage which product's subProducts are visible
+  const toggleSubProducts = (id) => {
+    setOpenProductId(openProductId === id ? null : id); // Toggle visibility of subProducts
+  };
 
   return (
     <>
       <div className="industify_fn_header">
-        {/* <!-- Header: Top Panel --> */}
-        {/* <div className="industify_fn_toppanel">
-          <div className="left_panel">
-            <div className="info">
-              <Link href="tel:07787744741">(0778) 774 - 474 -1</Link>
-            </div>
-            <div className="info">
-              <Link href="mailto:rendycoder.com@gmail.com">
-                trendycoder.com@gmail.com
-              </Link>
-            </div>
-            <div className="industify_fn_social_list">
-              <ul>
-                <li>
-                  <Link href="#" target="_blank" rel="noreferrer">
-                    <Facebook className="fn__svg" />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" target="_blank" rel="noreferrer">
-                    <Twitter className="fn__svg" />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" target="_blank" rel="noreferrer">
-                    <Instagram className="fn__svg" />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" target="_blank" rel="noreferrer">
-                    <Vk className="fn__svg" />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" target="_blank" rel="noreferrer">
-                    <Linkedin className="fn__svg" />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> */}
-        {/* <!-- /Header: Top Panel --> */}
-
-        {/* <!-- Header: Bottom Panel --> */}
         <div className="header_inner">
           <div className="menu_logo">
             <Link href="/">
-              {/* <img
-                className="desktop_logo"
-                src="/img/logo-light.png"
-                alt="Industry HTML Template"
-              />
-              <img
-                className="desktop_logo_dark"
-                src="/img/logo-dark.png"
-                alt="Industry HTML Template"
-              /> */}
               <Image
                 style={{ width: "250px", height: "300px", objectFit: "cover" }}
                 src={LogoImage}
@@ -100,13 +42,39 @@ export default function DesktopHeader() {
               <li className="menu-item-has-children">
                 <Link href="/products">Our Products</Link>
                 <ul className="sub-menu">
-                  {ourProducts.map((item) => {
+                  {/* {ourProducts.map((item) => {
                     return (
                       <li key={item.id}>
                         <Link href={`/products/${item.id}`}>{item.title}</Link>
                       </li>
                     );
-                  })}
+                  })} */}
+                  {ourProducts.map((item) => (
+                    <li key={item.id} className="relative group">
+                      <Link
+                        href={`/products/${item.id}`}
+                        style={{ display: "flex", gap: "2px" }}
+                        className="px-4 py-2 hover:font-bold"
+                      >
+                        <div className=" flex-1">{item.title}</div>
+                        <RightChevron />
+                      </Link>
+                      {item.subProducts && (
+                        <ul className="absolute left-full top-0 mt-2 space-y-2 bg-white shadow-lg hidden group-hover:block">
+                          {item.subProducts.map((subProduct) => (
+                            <li key={subProduct.id}>
+                              <Link
+                                href={`/products/${item.id}/${subProduct.id}`}
+                                className="block px-4 py-2 hover:font-semibold"
+                              >
+                                {subProduct.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
                 </ul>
               </li>
               {/* <li className="menu-item-has-children">
