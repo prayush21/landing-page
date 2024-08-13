@@ -3816,6 +3816,18 @@ blockquote {
   background-color: #333;
   z-index: 1;
 }
+.industify_slider_alpha .overlay_holder {
+  /* position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #333;
+  z-index: 2; */
+}
 .industify_slider_alpha .title_holder {
   position: absolute;
   top: 50%;
@@ -6605,6 +6617,7 @@ blockquote {
   height: 36px;
   position: relative;
   margin-top: -11px;
+  margin-left: 10px;
 }
 .fn_cs_info_rating h3.rating_number {
   margin: 0px;

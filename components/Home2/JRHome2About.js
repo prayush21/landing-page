@@ -29,7 +29,7 @@ export default function JRHome2About() {
                   </p>
                 </div>
                 <div className="sign_holder">
-                  <h3 className="name">Alan Michaelis</h3>
+                  <h3 className="name">Mr. Vipul Patel</h3>
                   <p className="occ">Founder</p>
                 </div>
               </div>
@@ -44,7 +44,10 @@ export default function JRHome2About() {
                     <img src="/img/thumb/500-560.jpg" alt="" />
                     <div
                       className="abs_img"
-                      style={{ backgroundImage: "url(/img/about/right.jpg)" }}
+                      style={{
+                        backgroundImage: "url(/Images/founder.jpg)",
+                        backgroundPosition: "top",
+                      }}
                     ></div>
                   </div>
                   <div

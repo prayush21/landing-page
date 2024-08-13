@@ -23,7 +23,9 @@ export const ourProducts = [
     id: "tile-adhesives",
     title: "Tile Adhesives",
     description: "",
+    sliderImage: "/Images/tiles.jpg",
     image: "/img/service/single/9.jpg",
+    homeImageSrc: "/Images/tiles.jpg",
     subProducts: [
       {
         id: "f00-fixcon-eco",
@@ -342,6 +344,8 @@ export const ourProducts = [
     title: "Block Adhesives",
     description: "",
     image: "/img/service/single/9.jpg",
+    sliderImage: "/Images/epoxy-adhesive.jpg",
+    homeImageSrc: "/Images/block-adhesive.png",
     subProducts: [
       {
         id: "b01",
@@ -390,6 +394,8 @@ export const ourProducts = [
     title: "Tile Grout",
     description: "",
     image: "/img/service/single/9.jpg",
+    sliderImage: "/Images/tile-grout-3.avif",
+    homeImageSrc: "/Images/tile-grout.webp",
     subProducts: [
       {
         id: "maxbond-grout-admix",
@@ -472,7 +478,9 @@ export const ourProducts = [
     id: "epoxy-grout",
     title: "Epoxy Grout",
     description: "",
+    imgSrc: "/Images/epoxy-grout.jpg",
     image: "/img/service/single/9.jpg",
+    homeImageSrc: "/Images/epoxy-grout.jpg",
     subProducts: [
       {
         id: "j01-sparkle",
@@ -653,6 +661,8 @@ export const ourProducts = [
     id: "epoxy-adhesive",
     title: "Epoxy Adhesive",
     description: "",
+    imgSrc: "/Images/epoxy-adhesive.jpg",
+    homeImageSrc: "/Images/epoxy-adhesive.jpg",
     image: "/img/service/single/9.jpg",
     subProducts: [
       {
@@ -707,6 +717,7 @@ export const ourProducts = [
     title: "Waterproofing Segment",
     description: "",
     image: "/img/service/single/9.jpg",
+    homeImageSrc: "/Images/waterproofing.jpg",
     subProducts: [
       {
         id: "sb-plus-solbond",
@@ -901,6 +912,7 @@ export const ourProducts = [
     title: "Tiles Cleaners",
     description: "",
     image: "/img/service/single/9.jpg",
+    imgSrc: "/Images/tiling.jpg",
     subProducts: [
       {
         id: "t03-tile-power-tiles-cleaner",

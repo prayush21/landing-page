@@ -5,7 +5,7 @@ import { ourProducts } from "../../data";
 import Breadcrumb from "@/layouts/breadcumb";
 
 export const metadata = {
-  title: "Services",
+  title: "JR Bond | Our Products",
 };
 
 export default function page() {

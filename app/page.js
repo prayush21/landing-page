@@ -8,7 +8,7 @@ import JRHome3Service from "@/components/Home3/JRHome3Service";
 import Home3Introduce from "@/components/Home3/Home3Introduce";
 
 export const metadata = {
-  title: "Home",
+  title: "JR Bond | Home",
 };
 
 export default function home() {

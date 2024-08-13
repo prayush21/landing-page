@@ -8,9 +8,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 register();
 
 // Images imported
-const slider1 = "/img/slider/1.jpg";
-const slider2 = "/img/slider/4.jpg";
-const slider3 = "/img/slider/3.jpg";
+const slider1 = "/Images/slider/epoxy-adhesive.jpg";
+const slider2 = "/img/slider/epoxy-grout.jpg";
+const slider3 = "/img/slider/grout.jpg";
 const slider4 = "/img/slider/4.jpg";
 const slider5 = "/img/slider/5.jpg";
 
@@ -68,33 +68,37 @@ export default function JRHomeSlider() {
           }}
           className="custom-class"
         >
-          {ourProducts.slice(0, 4).map(({ title, description, imgSrc }) => {
-            return (
-              <SwiperSlide key={title}>
-                <div className="item">
-                  <div
-                    className="img_holder"
-                    style={{ backgroundImage: `url(${imgSrc})` }}
-                  ></div>
-                  <div className="title_holder">
-                    <div className="inner">
-                      <div className="in">
-                        {/* <p>
+          {ourProducts
+            .slice(0, 3)
+            .map(({ title, description, sliderImage }) => {
+              return (
+                <SwiperSlide key={title}>
+                  <div className="item">
+                    <div
+                      className="img_holder"
+                      style={{ backgroundImage: `url(${sliderImage})` }}
+                    >
+                      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                    </div>
+                    <div className="title_holder">
+                      <div className="inner">
+                        <div className="in">
+                          {/* <p>
                           <span>Industry</span>
                         </p> */}
-                        <h3>
-                          <span>{title}</span>
-                        </h3>
-                        <div className="desc">
-                          <span>{description}</span>
+                          <h3>
+                            <span>{title}</span>
+                          </h3>
+                          <div className="desc">
+                            <span>{description}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
 
         {/* <!-- Alpha Slider: wrapper --> */}

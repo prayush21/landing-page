@@ -30,7 +30,10 @@ export default function Home3Hero() {
         <div className="bg_holder">
           <div
             className="o_img"
-            style={{ background: `url(${headerBG})` }}
+            style={{
+              backgroundImage: `url(/Images/tile-about-bg-2.jpg)`,
+              backgroundPosition: "center",
+            }}
           ></div>
           <div className="o_color"></div>
         </div>

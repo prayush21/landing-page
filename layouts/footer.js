@@ -32,9 +32,9 @@ export default function Footer() {
                       </div>
                       <div className="textwidget ml-8">
                         <p>
-                          We are focused on user-driven outcomes, we strive to
-                          create meaningful connections for users through
-                          considered strategy and innovation.
+                          We are focused on delivering the best in class tile
+                          adhesives, grouts and waterproofing segment, that our
+                          clients would like to choose above anything else.
                         </p>
                       </div>
                     </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                               <li key={category.id}>
                                 <Link
                                   className="hover:underline"
-                                  href={`/${category.id}`}
+                                  href={`/products/${category.id}`}
                                 >
                                   {category.title}
                                 </Link>

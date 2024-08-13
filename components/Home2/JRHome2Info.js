@@ -14,7 +14,7 @@ export default function JRHome2Info() {
                     <Checked className="fn__svg" />
                   </span>
                   <h3>We Have ISO Certificate</h3>
-                  <p>An ISO 1900:2007</p>
+                  <p>An ISO 1900:2015</p>
                 </div>
               </li>
               <li>

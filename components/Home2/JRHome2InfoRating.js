@@ -19,7 +19,7 @@ export default function JRHome2InfoRating() {
                 <p className="l_desc">
                   JR Bond proudly holds multiple prestigious accreditations,
                   underscoring our commitment to excellence. Our accolades
-                  include ISI Certificate, CE, ISO 9001;2015, which reflect our
+                  include RAPL, MQA and ISO 9001;2015, which reflect our
                   dedication to industry-leading standards and our unwavering
                   focus on quality and expertise.”
                 </p>
@@ -48,22 +48,39 @@ export default function JRHome2InfoRating() {
                 </div>
                 <div className="tagline_holder" style={{ height: "310.969px" }}>
                   <div className="tl_inner">
-                    <span>Full reviews at trustpilot</span>
+                    {/* <span>Full reviews at trustpilot</span> */}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="right_part">
-              <div
+            <div className="right_part border border-black">
+              {/* <div
                 className="o_img"
                 style={{ backgroundImage: "url(/img/about/rating_bg.jpg)" }}
-              ></div>
+              ></div> */}
+              <div className="flex space-x-20">
+                <img
+                  className="w-1/2 border-2 border-black shadow-md ml-4"
+                  src="/Images/certificate2.jpg"
+                  alt="certificate 2"
+                />
+                <img
+                  className="w-1/2 border-2 border-black shadow-md"
+                  src="/Images/certificate3.jpg"
+                  alt="certificate 3"
+                />
+              </div>
+              <img
+                className=" -mt-36 border-2 border-black shadow-md ml-16"
+                src="/Images/certificate1.jpg"
+                alt="certificate 1"
+              />
               <div className="o_color"></div>
             </div>
           </div>
         </div>
       </div>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         autoplay={true}
         isOpen={isOpen}
@@ -71,7 +88,7 @@ export default function JRHome2InfoRating() {
         animationSpeed={300}
         onClose={() => setIsOpen(false)}
         modalVideoClose="mfp-close"
-      />
+      /> */}
     </>
   );
 }

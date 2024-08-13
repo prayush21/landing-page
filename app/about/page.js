@@ -7,7 +7,7 @@ import Home3Hero from "@/components/Home3/Home3Hero";
 import Layout from "@/layouts/layout";
 
 export const metadata = {
-  title: "Home Beta",
+  title: "JR Bond | About",
 };
 
 export default function home5() {

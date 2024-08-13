@@ -6,7 +6,7 @@ import Link from "next/link";
 import ContactInfo from "../../components/UpdatedContactInfo";
 
 export const metadata = {
-  title: "Contact",
+  title: "JR Bond | Contact",
 };
 
 export default function page() {

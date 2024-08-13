@@ -36,38 +36,40 @@ export default function JRHomeProduct() {
             <div className="right_part">
               <div className="fn_cs_sticky_section">
                 <ul>
-                  {ourProducts.slice(2, 6).map(({ title, description }) => {
-                    return (
-                      <li key={title}>
-                        <div className="item">
-                          <div className="img_holder">
-                            <img src="/img/thumb/560-375.jpg" alt="" />
-                            <div
-                              className="abs_img"
-                              style={{
-                                backgroundImage: "url(/img/portfolio/1.jpg)",
-                              }}
-                            >
-                              <Link href="portfolioSinglePage1"></Link>
+                  {ourProducts
+                    .slice(2, 6)
+                    .map(({ title, homeImageSrc, description, id }) => {
+                      return (
+                        <li key={id}>
+                          <div className="item">
+                            <div className="img_holder">
+                              <img src="/img/thumb/560-375.jpg" alt="" />
+                              <div
+                                className="abs_img"
+                                style={{
+                                  backgroundImage: `url(${homeImageSrc})`,
+                                }}
+                              >
+                                <Link href={`/products/${id}`}></Link>
+                              </div>
+                            </div>
+                            <div className="title_holder">
+                              <h3>
+                                <Link href={`/products/${id}`}>{title}</Link>
+                              </h3>
+                              <p>
+                                <Link href={`/products/${id}`}>
+                                  <span className="text">View More</span>
+                                  <span className="arrow">
+                                    <Arrow_r className="fn__svg" />
+                                  </span>
+                                </Link>
+                              </p>
                             </div>
                           </div>
-                          <div className="title_holder">
-                            <h3>
-                              <Link href="portfolioSinglePage1">{title}</Link>
-                            </h3>
-                            <p>
-                              <Link href="portfolioSinglePage1">
-                                <span className="text">View More</span>
-                                <span className="arrow">
-                                  <Arrow_r className="fn__svg" />
-                                </span>
-                              </Link>
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    );
-                  })}
+                        </li>
+                      );
+                    })}
                 </ul>
               </div>
             </div>
